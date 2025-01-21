@@ -50,7 +50,7 @@ const Nav = () => {
 
     const MobileMenu = () => (
         <div
-            className={`lg:hidden block fixed top-0 left-0 w-full h-full glassmorph transition-transform duration-300 z-40 ${
+            className={`lg:hidden block fixed top-0 left-0 m-0 w-full h-full glassmorph transition-transform duration-300 z-40 ${
                 click ? "translate-y-0" : "-translate-y-full"
             }`}
         >
@@ -61,7 +61,7 @@ const Nav = () => {
                 <FaTimes />
             </button>
             <ul className="text-center text-lg lg:text-xl p-20">
-                {["Accueil", "A Propos", "Compétences", "Projets", "Contact"].map((item) => (
+                {["Accueil", "À Propos", "Compétences", "Projets", "Contact"].map((item) => (
                     <li className="my-4 py-4" key={item}>
                         <FlipLink to={item.replace(/\s+/g, '')}>{item}</FlipLink>
                     </li>
@@ -73,7 +73,7 @@ const Nav = () => {
     const DesktopMenu = () => (
         <div className="flex">
             <ul className="flex gap-10 lg:mr-12 md:mr-10">
-                {["Accueil", "A Propos", "Compétences", "Projets"].map((item) => (
+                {["Accueil", "À Propos", "Compétences", "Projets"].map((item) => (
                     <motion.div
                         key={item}
                         className="flex flex-col"
@@ -100,7 +100,7 @@ const Nav = () => {
         <nav>
             <div className="h-10vh flex justify-between items-center z-50 text-white lg:py-5 py-4">
                 <div className="flex items-center flex-1">
-                    <span className="text-xs lg:text-base md:text-base font-bold ml-5">Mon Portfolio</span>
+                    <span className="lg:text-base md:text-base font-bold ml-5">Mon Portfolio</span>
                 </div>
                 <div className="hidden md:block">
                     <DesktopMenu />
