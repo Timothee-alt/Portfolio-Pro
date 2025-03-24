@@ -14,6 +14,15 @@ const Nav = () => {
 
     const[hovered, setHovered] = useState(false)
 
+    // Liste des sections avec leurs IDs correspondants
+    const sections = [
+        { name: "Accueil", id: "hero" },
+        { name: "À Propos", id: "about" },
+        { name: "Compétences", id: "skills" },
+        { name: "Projets", id: "project" },
+        { name: "Contact", id: "contact" }
+    ];
+
     const FlipLink = ({ children, to, className }) => (
         <motion.div
             initial="initial"
@@ -24,6 +33,8 @@ const Nav = () => {
                 to={to}
                 spy={true}
                 smooth={true}
+                offset={-100} // Ajout d'un offset pour éviter que le header ne cache le contenu
+                duration={500} // Animation plus fluide
                 className={`relative text-2xl text-white hover-underline-animation ${className}`}
                 onClick={() => setClick(false)}
             >
@@ -60,10 +71,10 @@ const Nav = () => {
             >
                 <FaTimes />
             </button>
-            <ul className="text-center text-lg lg:text-xl p-20">
-                {["Accueil", "À Propos", "Compétences", "Projets", "Contact"].map((item) => (
-                    <li className="my-4 py-4" key={item}>
-                        <FlipLink to={item.replace(/\s+/g, '')}>{item}</FlipLink>
+            <ul className="h-full flex flex-col justify-center items-center">
+                {sections.map((section) => (
+                    <li className="my-4 py-4" key={section.id}>
+                        <FlipLink to={section.id}>{section.name}</FlipLink>
                     </li>
                 ))}
             </ul>
@@ -73,14 +84,16 @@ const Nav = () => {
     const DesktopMenu = () => (
         <div className="flex">
             <ul className="flex gap-10 lg:mr-12 md:mr-10">
-                {["Accueil", "À Propos", "Compétences", "Projets"].map((item) => (
+                {sections.slice(0, -1).map((section) => (
                     <motion.div
-                        key={item}
+                        key={section.id}
                         className="flex flex-col"
                         whileHover="hovered"
                         initial="initial"
                     >
-                        <FlipLink to={item.replace(/\s+/g, "")} className="lg:text-base md:text-sm font-bold">{item}</FlipLink>
+                        <FlipLink to={section.id} className="lg:text-base md:text-sm font-bold">
+                            {section.name}
+                        </FlipLink>
                         <motion.div
                             className="border-t-4 border-purple-600 rounded-xl"
                             variants={{

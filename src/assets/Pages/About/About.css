@@ -6,14 +6,37 @@
     border-bottom: 1px solid rgba(247, 246, 246, 0.3);
     border: 2px solid transparent;
     border-radius: 12px;
-
+    transition: all 0.3s ease-in-out;
 }
 
+.glassmorph-cards:hover {
+    border-color: rgba(108, 63, 149, 0.5);
+    box-shadow: 0 8px 40px rgba(108, 63, 149, 0.2);
+}
 
 .text-gradient {
-    background: #6C3F95;
-    background: linear-gradient(to right, #6C3F95 0%, #DBD5DF 100%);
+    background: linear-gradient(45deg, #6C3F95 0%, #DBD5DF 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
+}
+
+.hover-button:hover {
+    transform: translate(-50%, -2px) scale(1.1);
+    background: linear-gradient(45deg, #6C3F95, #8B5FBF);
+    box-shadow: 0 4px 15px rgba(108, 63, 149, 0.4);
+}
+
+.hover-title:hover .bg-purple-600 {
+    height: 120%;
+    transition: height 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hover-card {
+    animation: fadeIn 0.5s ease-out;
 }

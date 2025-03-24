@@ -3,6 +3,8 @@ import Hero from './assets/Pages/Hero/Hero';
 import ShaderGradient from './assets/Components/Background/ShaderGradient';
 import About from './assets/Pages/About/About';
 import Skills from './assets/Pages/Skills/Skills';
+import Project from './assets/Pages/Project/Project';
+import Contact from './assets/Pages/Contact/Contact';
 
 function App() {
 
@@ -14,6 +16,8 @@ function App() {
         <Hero />
         <About />
         <Skills />
+        <Project />
+        <Contact />
       </div>
     </div>
     </>
