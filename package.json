@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "homepage": "https://https://timothee-alt.github.io/P2-0/"
+    "homepage": "https://timothee-alt.github.io/P2-0/"
   },
   "dependencies": {
     "@react-spring/three": "^9.7.5",
