@@ -14,7 +14,7 @@ const Nav = () => {
 
     const[hovered, setHovered] = useState(false)
 
-    // Liste des sections avec leurs IDs correspondants
+    
     const sections = [
         { name: "Accueil", id: "hero" },
         { name: "À Propos", id: "about" },
@@ -33,8 +33,8 @@ const Nav = () => {
                 to={to}
                 spy={true}
                 smooth={true}
-                offset={-100} // Ajout d'un offset pour éviter que le header ne cache le contenu
-                duration={500} // Animation plus fluide
+                offset={-100} 
+                duration={500} 
                 className={`relative text-2xl text-white hover-underline-animation ${className}`}
                 onClick={() => setClick(false)}
             >

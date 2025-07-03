@@ -4,7 +4,7 @@ import { FaGithub, FaDownload } from "react-icons/fa";
 
 function Hero() {
     const handleDownloadCV = () => {
-        window.open('/CV.pdf', '_blank');
+        window.open('/P2-0/CV.pdf', '_blank');
     };
 
     return (
@@ -22,7 +22,7 @@ function Hero() {
                     <div className='text-white font-bold ml-3 mb-10 text-lg md:text-3xl md:'>Bienvenue sur mon <span className='text-purple-600'>Portfolio</span></div>
                 </div>
                 <div>
-                    <p className='text-white text-sm xl:text-lg ml-3 '>Je suis étudiant en BTS SIO option SLAM, passionné par le design et les nouvelles technologies </p>
+                    <p className='text-white text-sm xl:text-lg ml-3 '>Je suis développeur full-stack, passionné par le design et les nouvelles technologies </p>
                     <div className='flex ml-4 md:ml-50 lg:ml-6 gap-5 mt-10 items-center'>
                         <button 
                             onClick={handleDownloadCV}

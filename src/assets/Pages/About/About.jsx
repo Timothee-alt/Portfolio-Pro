@@ -1,7 +1,7 @@
 import './About.css';
-import logoGreta from './logogreta.png';
 import Particles from './Particle';
-import { IoMdSchool, IoMdBusiness, IoMdCode, IoMdTrendingUp } from "react-icons/io";
+import { IoMdCode, IoMdTrendingUp } from "react-icons/io";
+import { FaLightbulb, FaHandshake, FaSearch, FaMountain } from "react-icons/fa";
 import { motion } from 'framer-motion';
 
 function About() {
@@ -19,94 +19,104 @@ function About() {
             </motion.div>
 
             <div className="max-w-6xl mx-auto mt-16">
-                <div className='grid gap-6 md:grid-cols-4'>
+                <div className='grid gap-6 md:grid-cols-2 '>
                     <motion.div 
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="glassmorph-cards p-6 md:col-span-3 rounded-2xl bg-gradient-to-br from-purple-900/50 to-transparent backdrop-blur-sm border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 relative overflow-hidden"
+                        className="relative rounded-2xl overflow-hidden cursor-pointer
+                            border border-purple-600/20 bg-gradient-to-br from-purple-900/60 to-transparent
+                            shadow-lg backdrop-blur-[14px]
+                            hover:shadow-[0_0_25px_6px_rgba(102,46,255,0.7)] hover:border-purple-600/70
+                            transform hover:scale-[1.04] transition-all duration-700 ease-in-out p-6 "
                     >
                         <Particles className="absolute inset-0 pointer-events-none" />
-                        <div className="relative z-10">
-                            <h3 className="text-xl md:text-2xl font-bold text-white mb-6">Le BTS SIO</h3>
-                            <p className="text-gray-300 leading-relaxed mb-6">
-                                Le <span className='text-gradient'>BTS SIO</span> (Services Informatiques aux Organisation) est un diplôme qui forme des professionnels capables de participer à la production et à l'adaptation de solutions techniques d'infrastructure ou applicatives.
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent z-10 transform hover:scale-[1.04]
+                        transition-all duration-700 ease-in-out"></div>
+                        <div className="relative z-20 transform hover:scale-[1.04]
+                        transition-all duration-700 ease-in-out">
+                            <h3 className="text-xl md:text-2xl font-bold text-white mb-6">Développeur Full Stack</h3>
+                            <p className="text-white leading-relaxed mb-6">
+                                Après l'obtention de mon <span className="text-gradient">BTS Services Informatiques aux Organisations</span>, je me suis pleinement consacré au développement web et à la conception d'applications. Fort de plusieurs projets concrets, je maîtrise les technologies modernes et je cherche constamment à innover.
                             </p>
-                            <a
-                                href='https://greta-bretagne.ac-rennes.fr/portail/web/notre-reseau/greta-cfa-bretagne-sud/agence-de-vannes/stages/bts-services-informatiques-aux' 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center space-x-2 px-4 py-2 bg-purple-600/20 hover:bg-purple-600/40 
-                                rounded-lg text-white transition-all duration-300 hover:transform hover:translate-y-[-2px] w-fit"
-                            >
-                                <IoMdSchool className="text-sm" />
-                                <span>En savoir plus</span>
-                            </a>
                         </div>
                     </motion.div>
-
                     <motion.div 
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="glassmorph-cards p-6 md:col-span-1 rounded-2xl bg-gradient-to-br from-purple-900/50 to-transparent backdrop-blur-sm border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 relative overflow-hidden"
+                        className="relative rounded-2xl overflow-hidden cursor-pointer
+                            border border-purple-600/20 bg-gradient-to-br from-purple-900/60 to-transparent
+                            shadow-lg backdrop-blur-[14px]
+                            hover:shadow-[0_0_25px_6px_rgba(102,46,255,0.7)] hover:border-purple-600/70
+                            transform hover:scale-[1.04] transition-all duration-700 ease-in-out p-6"
                     >
                         <Particles className="absolute inset-0 pointer-events-none" />
-                        <div className="relative z-10">
-                            <div className="flex flex-col items-center text-center">
-                                <div className="p-3 bg-purple-600/20 rounded-lg mb-4">
-                                    <IoMdCode className="text-3xl text-white" />
-                                </div>
-                                <h3 className="text-lg font-bold text-white mb-3">Option SLAM</h3>
-                                <p className="text-gray-300 text-sm">
-                                    Solutions Logicielles et Applications Métiers.
-                                </p>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent z-10"></div>
+                        <div className="relative z-20 flex flex-col items-center text-center">
+                            <div className="p-3 bg-purple-600/20 rounded-lg mb-4">
+                                <IoMdCode className="text-3xl text-white" />
                             </div>
+                            <h3 className="text-lg font-bold text-white mb-3">Formation</h3>
+                            <p className="text-white text-sm">
+                                BTS Services Informatiques aux Organisations (SIO) – Option SLAM
+                            </p>
                         </div>
                     </motion.div>
-
                     <motion.div 
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
-                        className="glassmorph-cards p-6 md:col-span-1 rounded-2xl bg-gradient-to-br from-purple-900/50 to-transparent backdrop-blur-sm border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 relative overflow-hidden"
+                        className="relative rounded-2xl overflow-hidden cursor-pointer
+                            border border-purple-600/20 bg-gradient-to-br from-purple-900/60 to-transparent
+                            shadow-lg backdrop-blur-[14px]
+                            hover:shadow-[0_0_25px_6px_rgba(102,46,255,0.7)] hover:border-purple-600/70
+                            transform hover:scale-[1.04] transition-all duration-700 ease-in-out p-6"
                     >
                         <Particles className="absolute inset-0 pointer-events-none" />
-                        <div className="relative z-10">
-                            <div className="flex flex-col items-center text-center">
-                                <div className="p-3 bg-purple-600/20 rounded-lg mb-4">
-                                    <IoMdTrendingUp className="text-3xl text-white" />
-                                </div>
-                                <h3 className="text-lg font-bold text-white mb-3">Objectifs</h3>
-                                <p className="text-gray-300 text-sm">
-                                    Devenir développeur Full Stack et créer des applications web.
-                                </p>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent z-10"></div>
+                        <div className="relative z-20 flex flex-col items-center text-center">
+                            <div className="p-3 bg-purple-600/20 rounded-lg mb-4">
+                                <IoMdTrendingUp className="text-3xl text-white" />
                             </div>
+                            <h3 className="text-lg font-bold text-white mb-3">Objectifs</h3>
+                            <p className="text-white text-sm">
+                                Devenir développeur Full Stack et créer des applications web.
+                            </p>
                         </div>
                     </motion.div>
-
                     <motion.div 
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.6 }}
-                        className="glassmorph-cards p-6 md:col-span-3 rounded-2xl bg-gradient-to-br from-purple-900/50 to-transparent backdrop-blur-sm border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 relative overflow-hidden"
+                        className="relative rounded-2xl overflow-hidden cursor-pointer
+                            border border-purple-600/20 bg-gradient-to-br from-purple-900/60 to-transparent
+                            shadow-lg backdrop-blur-[14px]
+                            hover:shadow-[0_0_25px_6px_rgba(102,46,255,0.7)] hover:border-purple-600/70
+                            transform hover:scale-[1.04] transition-all duration-700 ease-in-out p-6"
                     >
                         <Particles className="absolute inset-0 pointer-events-none" />
-                        <div className="relative z-10">
-                            <h3 className="text-xl md:text-2xl font-bold text-white mb-6">Le GRETA</h3>
-                            <p className="text-gray-300 leading-relaxed mb-6">
-                                Le <span className='text-gradient'>GRETA</span>, organisme de formation continue, est un partenaire clé dans ce parcours, offrant des ressources et un soutien précieux pour développer mes compétences professionnelles.
-                            </p>
-                            <a
-                                href='https://greta-bretagne.ac-rennes.fr/portail/web/notre-reseau/greta-cfa-des-cotes-d-armor' 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center space-x-2 px-4 py-2 bg-purple-600/20 hover:bg-purple-600/40 
-                                rounded-lg text-white transition-all duration-300 hover:transform hover:translate-y-[-2px] w-fit"
-                            >
-                                <IoMdBusiness className="text-sm" />
-                                <span>En savoir plus</span>
-                            </a>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent z-10"></div>
+                        <div className="relative z-20">
+                            <h3 className="text-xl md:text-2xl font-bold text-white mb-6 text-center">Valeurs professionnelles</h3>
+                            <div className="grid grid-cols-2 gap-6">
+                                <div className="flex flex-col items-center">
+                                    <FaSearch className="text-3xl md:text-4xl text-purple-400 mb-2" />
+                                    <span className="text-white text-base md:text-lg text-center">Curiosité</span>
+                                </div>
+                                <div className="flex flex-col items-center">
+                                    <FaHandshake className="text-3xl md:text-4xl text-purple-400 mb-2" />
+                                    <span className="text-white text-base md:text-lg text-center">Collaboration</span>
+                                </div>
+                                <div className="flex flex-col items-center">
+                                    <FaMountain className="text-3xl md:text-4xl text-purple-400 mb-2" />
+                                    <span className="text-white text-base md:text-lg text-center">Persévérance</span>
+                                </div>
+                                <div className="flex flex-col items-center">
+                                    <FaLightbulb className="text-3xl md:text-4xl text-purple-400 mb-2" />
+                                    <span className="text-white text-base md:text-lg text-center">Créativité</span>
+                                </div>
+                            </div>
                         </div>
                     </motion.div>
                 </div>
