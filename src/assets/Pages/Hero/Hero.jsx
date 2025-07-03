@@ -4,7 +4,7 @@ import { FaGithub, FaDownload } from "react-icons/fa";
 
 function Hero() {
     const handleDownloadCV = () => {
-        window.open('/P2-0/CV.pdf', '_blank');
+        window.open('/CV.pdf', '_blank');
     };
 
     return (

@@ -5,9 +5,9 @@ import Particles from '../About/Particle';
 function Skills() {
     const handleDownload = (certifType) => {
         const files = {
-            anssi: '/P2-0/ANSSI.pdf',
-            cnil: '/P2-0/CNIL.pdf',
-            synthese: '/P2-0/Synthese_BTS.pdf'  
+            anssi: 'ANSSI.pdf',
+            cnil: 'CNIL.pdf',
+            synthese: 'Synthese_BTS.pdf'  
         };
         
         window.open(files[certifType], '_blank');
