@@ -1,10 +1,26 @@
 import { FaGithub, FaHtml5, FaCss3Alt } from 'react-icons/fa';
-import { SiNextdotjs, SiTailwindcss, SiMongodb, SiPostgresql, SiBootstrap, SiSpringboot, SiMysql } from 'react-icons/si';
+import { SiNextdotjs, SiTailwindcss, SiBootstrap, SiSpringboot, SiMysql } from 'react-icons/si';
+import { TbCloverFilled } from "react-icons/tb";
+import { CiGlobe } from "react-icons/ci";
 import { motion } from 'framer-motion';
 import Particles from '../About/Particle';
 
 function Project() {
     const projects = [
+        {
+            title: "Sunny Lounge",
+            description: "Un site vitrine pour un bar, qui m'a permis d'apprendre de nouvelles compétences, en particulier l'utilisation de GSAP",
+            technologies: [
+                { icon: SiNextdotjs, name:"Next.js", color: 'hover:text-gray-200'},
+                { icon: SiTailwindcss, name: "Tailwind", color: 'hover:text-cyan-400' },
+                { icon: TbCloverFilled, name: "GSAP", color: 'hover:text-green-400' },
+            ],
+            type: "Projet personnel",
+            github:"https://github.com/Timothee-alt/vitrine-bar.git",
+            imageUrl: "/images/sunny_lounge.png",
+            site: "https://vitrine-bar-gsap.vercel.app/",
+            codeStatus: "Voir le code"
+        },
         {
             title: "PANT",
             description: "Application web de livraison de nourriture développée dans le cadre de ma formation. Interface moderne et intuitive permettant aux utilisateurs de commander facilement leurs plats préférés.",
@@ -18,6 +34,8 @@ function Project() {
             type: "Projet de formation",
             github: "https://github.com/votre-lien-pant",
             imageUrl: "/images/pant-bg.jpg",
+            site: "",
+            codeStatus: "En cours..."
         },
         {
             title: "VINIUP",
@@ -30,6 +48,7 @@ function Project() {
             type: "Projet de stage",
             github: "https://github.com/votre-lien-viniup",
             imageUrl: "/images/viniup-bg.jpg",
+            codeStatus: "Indispo"
         },
         {
             title: "ARKEO (en cours)",
@@ -41,6 +60,7 @@ function Project() {
             type: "Projet personnel",
             github: "https://github.com/Timothee-alt/arkeo.git",
             imageUrl: "/images/arkeo-bg.jpg",
+            codeStatus: "En cours..."
         }
     ];
 
@@ -67,6 +87,21 @@ function Project() {
                                 hover:shadow-[0_0_25px_6px_rgba(102,46,255,0.7)] hover:border-purple-600/70
                                 transition-all duration-700 ease-in-out p-6"
                         >
+                            <div className="absolute inset-0 flex items-center justify-center -z-10">
+                                <div
+                                    className="w-3/5 h-3/5 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm
+                                        transform rotate-6 translate-y-4 shadow-xl transition-all duration-700
+                                        hover:rotate-3 hover:translate-y-2 bg-cover bg-center"
+                                    style={{
+                                        backgroundImage: `url('${project.imageUrl}')`,
+                                        backgroundBlendMode: 'overlay',
+                                        backgroundColor: 'rgba(255, 255, 255, 0.1)'
+                                    }}
+                                >
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20 rounded-2xl"></div>
+                                </div>
+                            </div>
+
                             <Particles className="absolute inset-0 pointer-events-none" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent z-10"></div>
                             <div className="relative z-20 flex flex-col h-full justify-between text-white">
@@ -77,14 +112,14 @@ function Project() {
                                             {project.type}
                                         </span>
                                     </div>
-                                    <p className="text-gray-300 leading-relaxed">{project.description}</p>
+                                    <p className="text-white leading-relaxed">{project.description}</p>
                                 </div>
                                 <div>
                                     <h4 className="font-semibold mt-6 mb-3">Technologies utilisées :</h4>
                                     <div className="flex flex-wrap gap-4">
                                         {project.technologies.map((tech, techIndex) => (
-                                            <div 
-                                                key={techIndex} 
+                                            <div
+                                                key={techIndex}
                                                 className={`flex items-center space-x-2 text-white transition-colors duration-300 ${tech.color} select-none`}
                                             >
                                                 <tech.icon className="text-xl" />
@@ -92,18 +127,45 @@ function Project() {
                                             </div>
                                         ))}
                                     </div>
-                                    <a
-                                        href={project.github}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center space-x-2 px-5 py-2 mt-6 rounded-full bg-purple-600/30 
-                                            hover:bg-purple-600/70 text-white font-semibold transition duration-300 select-none shadow-md
-                                            hover:shadow-purple-600"
-                                        aria-label={`Voir le code source GitHub du projet ${project.title}`}
-                                    >
-                                        <FaGithub className="text-lg" />
-                                        <span>Voir le code</span>
-                                    </a>
+                                    <div className="flex flex-wrap gap-4">
+                                        {project.github ? (
+                                            <a
+                                                href={project.github}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center space-x-2 px-5 py-2 mt-6 rounded-full bg-purple-600/30
+                                                hover:bg-purple-600/70 text-white font-semibold transition duration-300 select-none shadow-md
+                                                hover:shadow-purple-600"
+                                                aria-label={`Voir le code source GitHub du projet ${project.title}`}
+                                            >
+                                                <FaGithub className="text-lg" />
+                                                <span>{project.codeStatus || "Voir le code"}</span>
+                                            </a>
+                                        ) : (
+                                            <button
+                                                disabled
+                                                className="inline-flex items-center space-x-2 px-5 py-2 mt-6 rounded-full bg-gray-600/30 text-gray-300
+                                                font-semibold cursor-not-allowed select-none"
+                                            >
+                                                <FaGithub className="text-lg" />
+                                                <span>{project.codeStatus || "Indispo"}</span>
+                                            </button>
+                                        )}
+                                        {project.site && (
+                                            <a
+                                                href={project.site}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center space-x-2 px-5 py-2 mt-6 rounded-full bg-purple-600/30
+                                                hover:bg-purple-600/70 text-white font-semibold transition duration-300 select-none shadow-md
+                                                hover:shadow-purple-600"
+                                                aria-label={`Voir le site du projet ${project.title}`}
+                                            >
+                                                <CiGlobe className="text-lg" />
+                                                <span>Voir le site</span>
+                                            </a>
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                         </motion.div>
