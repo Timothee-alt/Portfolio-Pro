@@ -1,6 +1,7 @@
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaPython, FaPhp, FaShieldAlt, FaLock, FaDownload, FaGraduationCap, FaJava } from 'react-icons/fa';
 import { SiNextdotjs, SiTailwindcss, SiJavascript, SiDart, SiBootstrap, SiThreedotjs, SiTypescript, SiMysql, SiSpringboot } from 'react-icons/si';
 import Particles from '../About/Particle';
+import { TbCloverFilled } from "react-icons/tb";
 
 function Skills() {
     const handleDownload = (certifType) => {
@@ -92,7 +93,8 @@ function Skills() {
                                     { icon: SiBootstrap, name: 'Bootstrap', color: 'hover:text-purple-500' },
                                     { icon: SiThreedotjs, name: 'Three.js', color: 'hover:text-gray-300' },
                                     { icon: SiMysql, name: 'SQL', color: 'hover:text-blue-400' },
-                                    { icon: SiSpringboot, name: 'Spring Boot', color: 'hover:text-green-500' }
+                                    { icon: SiSpringboot, name: 'Spring Boot', color: 'hover:text-green-500' },
+                                    { icon: TbCloverFilled, name: 'GSAP', color: 'hover:text-green-300' }
                                 ].map((skill, index) => (
                                     <div key={index} 
                                         className={`flex flex-col items-center p-4 rounded-lg bg-white/5 backdrop-blur-sm 
