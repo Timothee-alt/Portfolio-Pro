@@ -1,6 +1,6 @@
-import { FaGithub, FaHtml5, FaCss3Alt } from 'react-icons/fa';
-import { SiNextdotjs, SiTailwindcss, SiBootstrap, SiSpringboot, SiMysql } from 'react-icons/si';
-import { TbCloverFilled } from "react-icons/tb";
+import { FaGithub, FaHtml5, FaCss3Alt, FaReact, FaUnsplash  } from 'react-icons/fa';
+import { SiNextdotjs, SiTailwindcss, SiBootstrap, SiSpringboot, SiMysql, SiAppwrite } from 'react-icons/si';
+import { TbCloverFilled, TbBrandVite, TbBrandSentry  } from "react-icons/tb";
 import { CiGlobe } from "react-icons/ci";
 import { motion } from 'framer-motion';
 import Particles from '../About/Particle';
@@ -9,7 +9,7 @@ function Project() {
     const projects = [
         {
             title: "Sunny Lounge",
-            description: "Un site vitrine pour un bar, qui m'a permis d'apprendre de nouvelles compétences, en particulier l'utilisation de GSAP",
+            description: "Un site vitrine pour le bar Sunny Lounge, conçu pour mettre en valeur son ambiance chaleureuse et ses offres. Le site utilise GSAP pour des animations fluides et engageantes, offrant une expérience utilisateur immersive.",
             technologies: [
                 { icon: SiNextdotjs, name:"Next.js", color: 'hover:text-gray-200'},
                 { icon: SiTailwindcss, name: "Tailwind", color: 'hover:text-cyan-400' },
@@ -22,19 +22,19 @@ function Project() {
             codeStatus: "Voir le code"
         },
         {
-            title: "PANT",
-            description: "Application web de livraison de nourriture développée dans le cadre de ma formation. Interface moderne et intuitive permettant aux utilisateurs de commander facilement leurs plats préférés.",
+            title: "Tour Pilot",
+            description: "Ma première application, qui sert à des agences de voyages, elle contient un catalogue pour les utilisateurs, une génération de voyage par une IA intégré. Une partie administrateur avec dashboard, pour le contrôle des données du site et des utilisateurs.",
             technologies: [
-                { icon: FaHtml5, name: "HTML", color: 'hover:text-orange-500' },
-                { icon: FaCss3Alt, name: "CSS", color: 'hover:text-blue-500' },
-                { icon: SiBootstrap, name: "Bootstrap", color: 'hover:text-purple-500' },
-                { icon: SiSpringboot, name: "Spring Boot", color: 'hover:text-green-500' },
-                { icon: SiMysql, name: "MySQL", color: 'hover:text-blue-400' }
+                { icon: TbBrandVite, name: "Vite", color: 'hover:text-purple-700' },
+                { icon: SiTailwindcss, name: "Tailwind", color: 'hover:text-cyan-400' },
+                { icon: FaUnsplash, name: "Unsplash", color: 'hover:text-gray-400' },
+                { icon: TbBrandSentry, name: "Sentry", color: 'hover:text-purple-400' },
+                { icon: SiAppwrite, name: "Appwrite", color: 'hover:text-red-400' }
             ],
-            type: "Projet de formation",
+            type: "Projet personnel",
             github: "https://github.com/votre-lien-pant",
-            imageUrl: "/images/pant-bg.jpg",
-            site: "",
+            imageUrl: "/images/tourpilot.jpg",
+            site: "https://tourpilot.vercel.app/",
             codeStatus: "En cours..."
         },
         {
