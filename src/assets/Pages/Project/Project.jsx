@@ -32,10 +32,10 @@ function Project() {
                 { icon: SiAppwrite, name: "Appwrite", color: 'hover:text-red-400' }
             ],
             type: "Projet personnel",
-            github: "https://github.com/votre-lien-pant",
+            github: "https://github.com/Timothee-alt/tourpilot.git",
             imageUrl: "/images/tourpilot.jpg",
             site: "https://tourpilot.vercel.app/",
-            codeStatus: "En cours..."
+            codeStatus: "Voir le code"
         },
         {
             title: "VINIUP",
