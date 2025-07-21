@@ -1,5 +1,5 @@
 import { FaGithub, FaHtml5, FaCss3Alt, FaReact, FaUnsplash  } from 'react-icons/fa';
-import { SiNextdotjs, SiTailwindcss, SiBootstrap, SiSpringboot, SiMysql, SiAppwrite } from 'react-icons/si';
+import { SiNextdotjs, SiTailwindcss, SiBootstrap, SiSpringboot, SiMysql, SiAppwrite, SiSupabase } from 'react-icons/si';
 import { TbCloverFilled, TbBrandVite, TbBrandSentry  } from "react-icons/tb";
 import { CiGlobe } from "react-icons/ci";
 import { motion } from 'framer-motion';
@@ -33,8 +33,23 @@ function Project() {
             ],
             type: "Projet personnel",
             github: "https://github.com/Timothee-alt/tourpilot.git",
-            imageUrl: "/images/tourpilot.jpg",
+            imageUrl: "/images/tourpilot.JPG",
             site: "https://tourpilot.vercel.app/",
+            codeStatus: "Voir le code"
+        },
+        {
+            title: "Job Search Bzh",
+            description: "Un site de recherche d'emploi pour la Bretagne, développé pour aider les chercheurs d'emploi à trouver des opportunités locales ou nationales, avec un système de suivi des candidatures. Le site utilise Next.js pour une performance optimale et Tailwind CSS pour un design moderne et réactif. Et un backend avec Supabase",
+            technologies: [
+                { icon: SiNextdotjs, name: "Next.js", color: 'hover:text-gray-200' },
+                { icon: SiTailwindcss, name: "Tailwind", color: 'hover:text-cyan-400' },
+                { icon: TbCloverFilled, name: "GSAP", color: 'hover:text-green-400' },
+                { icon: SiSupabase, name: "Supabase", color: 'hover:text-green-400' },
+            ],
+            type: "Projet personnel",
+            github: "https://github.com/Timothee-alt/jobsearchbzh.git",
+            imageUrl: "/images/jobsearch.JPG",
+            site: "https://jobsearchbzh.netlify.app/",
             codeStatus: "Voir le code"
         },
         {
@@ -43,12 +58,14 @@ function Project() {
             technologies: [
                 { icon: SiNextdotjs, name: "Next.js", color: 'hover:text-gray-200' },
                 { icon: SiSpringboot, name: "Spring Boot", color: 'hover:text-green-500' },
-                { icon: SiTailwindcss, name: "Tailwind", color: 'hover:text-cyan-400' }
+                { icon: SiTailwindcss, name: "Tailwind", color: 'hover:text-cyan-400' },
+                
             ],
-            type: "Projet de stage",
+            type: "Projet personnel",
             github: "https://github.com/votre-lien-viniup",
             imageUrl: "/images/viniup-bg.jpg",
-            codeStatus: "Indispo"
+            codeStatus: "En cours...",
+            site: "https://viniup.vercel.app/"
         },
         {
             title: "ARKEO (en cours)",
