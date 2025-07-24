@@ -1,5 +1,6 @@
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaPython, FaPhp, FaShieldAlt, FaLock, FaDownload, FaGraduationCap, FaJava } from 'react-icons/fa';
 import { SiNextdotjs, SiTailwindcss, SiJavascript, SiDart, SiBootstrap, SiThreedotjs, SiTypescript, SiMysql, SiSpringboot } from 'react-icons/si';
+import { IoMdTrendingUp } from "react-icons/io";
 import Particles from '../About/Particle';
 import { TbCloverFilled } from "react-icons/tb";
 
@@ -8,7 +9,8 @@ function Skills() {
         const files = {
             anssi: 'ANSSI.pdf',
             cnil: 'CNIL.pdf',
-            synthese: 'Synthese_BTS.pdf'  
+            synthese: 'Synthese_BTS.pdf',
+            seo: 'Certif_SEO.pdf'  
         };
         
         window.open(files[certifType], '_blank');
@@ -170,6 +172,31 @@ function Skills() {
                             </div>
                         </div>
                     </div>
+                    <div className="relative rounded-2xl overflow-hidden cursor-pointer
+                        border border-purple-600/20 bg-gradient-to-br from-purple-900/60 to-transparent
+                        shadow-lg backdrop-blur-[14px]
+                        hover:shadow-[0_0_25px_6px_rgba(102,46,255,0.7)] hover:border-purple-600/70
+                        transform  transition-all duration-700 ease-in-out p-6">
+                        <Particles className="absolute inset-0 pointer-events-none" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent z-10"></div>
+                        <div className="relative z-20 p-6">
+                            <div className="flex items-center space-x-4">
+                                <div className="p-3 bg-purple-600/20 rounded-lg">
+                                    <IoMdTrendingUp className="text-3xl text-white" />
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-bold text-white">SEO</h3>
+                                    <p className="text-gray-300 mt-1">Optimisation des sites pour un meilleur référencement.</p>
+                                </div>
+                            </div>
+                            <div className="mt-6 text-gray-300">
+                                <p className="text-sm leading-relaxed mb-4">
+                                    Certification SEO
+                                </p>
+                                {downloadButton(() => handleDownload('seo'), 'Télécharger le certificat')}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="max-w-6xl mx-auto mt-20">
@@ -199,6 +226,7 @@ function Skills() {
                     </div>
                 </div>
             </div>
+            
         </div>
     )
 };
